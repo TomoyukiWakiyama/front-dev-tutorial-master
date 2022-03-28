@@ -1,0 +1,30 @@
+@charset "UTF-8";
+#container {
+  text-align: center;
+}
+
+.btn {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  padding: 10px 40px;
+  margin: 50px 0;
+  /* font-weighは100-900 デフォルトは500 */
+  font-weight: 600;
+  cursor: pointer;
+  /* 変更の動作設定を行う */
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  /* 第1引数でtransitionを反映させる場所を指定する */
+  /* transition: color 2s; */
+  /* 第3引数のeaseは次回以降説明 */
+  /* 第4引数は開始までの時間を設定できる */
+  /* transition: all 0.3s ease 2s; */
+  /* 0.3s後colorを変えて、0.8s後にbackground-colorを変更させる */
+}
+
+.btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */

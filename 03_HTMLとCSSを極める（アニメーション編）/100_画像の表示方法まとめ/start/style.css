@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.bg-img {
+  height: 100px;
+  background: url(../start/images/400x250.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,25 @@
+.parent {
+    color: blue;
+}
+
+span {
+    color: red;
+}
+
+.cls {
+    color: orange;
+}
+
+#first {
+    color: black;
+}
+
+/* 詳細度がもっとも高い */
+.parent span {
+    color: white;
+}
+
+/* 同じ要素で指定した場合、後に記述された方が反映される */
+.parent span {
+    color: black;
+}

@@ -1,0 +1,32 @@
+.rect {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  background-color: orangered;
+
+  /* translate(x軸, y軸)：要素を移動させる。マイナスも指定できる */
+//   transform: translate(-150px, 50px);
+  /* 物体を100%としてパーセントで指定することもできる */
+//   transform: translate(50%, 100%);
+  /* X,Yそれぞれ単独でも指定できる */
+//   transform: translateX(150%);
+//   transform: translateY(-100%);
+
+  /* transform-origin：元の図形をもとにtop right center left bottomで起点を設定する */
+  transform-origin: center center;
+  /* 数値で細かく指定することもできる */
+//   transform-origin: -20px 20px;
+
+  /* rotate(角度deg)：度数分傾けることができる */
+  transform: rotate(-30deg);
+
+  /* skew(角度deg)：平行四辺形を作ることができる。斜め線を表現したい場合によく使用する */
+    // transform: skew(-30deg);
+
+  /* scale(x軸, y軸)：数字分その方向に大きくすることができる */
+//   transform: scale(1.5, 1.5);
+
+  /* 複数のtransformを使用する場合は半角スペースを空けて記述する */
+    // transform: translateX(200px) translateY(300px);
+
+}

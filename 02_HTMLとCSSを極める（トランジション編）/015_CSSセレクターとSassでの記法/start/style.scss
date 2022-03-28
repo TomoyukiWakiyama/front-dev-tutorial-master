@@ -1,0 +1,27 @@
+$c_white: #fff;
+$c_black: #333;
+
+#container {
+    text-align: center;
+}
+.btn {
+    background-color: #fff;
+    color: $c_black;
+    border: 1px solid $c_black;
+    padding: 10px 40px;
+    margin: 50px 0;
+    /* font-weighは100-900 デフォルトは500 */
+    font-weight: 600;
+    cursor: pointer;
+    /* 変更の動作設定を行う */
+    transition: all 0.3s;
+    border-radius: 3px;
+
+    // &は親要素の名前がそのまま入る
+    // &省略可能：半角スペースを開けれる場合（#container .btn）
+    // &省略不可：hoverのように半角スペースを開けられない場合は
+    &:hover {
+        background-color: $c_black;
+        color: $c_white;
+    }
+}

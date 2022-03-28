@@ -1,0 +1,26 @@
+a {
+    color: gold;
+
+    &:visited {
+        color: blue;
+    }
+
+    &:hover {
+        color: red;
+    }
+
+    &:active {
+        color: purple;
+    }
+}
+
+div {
+    & span {
+        color: olive;
+
+        &:nth-child(2n + 1){
+            color: purple;
+        }
+
+    }
+}

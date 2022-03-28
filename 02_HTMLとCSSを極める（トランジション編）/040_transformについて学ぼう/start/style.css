@@ -1,0 +1,21 @@
+@charset "UTF-8";
+.rect {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  background-color: orangered;
+  /* translate(x軸, y軸)：要素を移動させる。マイナスも指定できる */
+  /* 物体を100%としてパーセントで指定することもできる */
+  /* X,Yそれぞれ単独でも指定できる */
+  /* transform-origin：元の図形をもとにtop right center left bottomで起点を設定する */
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  /* 数値で細かく指定することもできる */
+  /* rotate(角度deg)：度数分傾けることができる */
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+  /* skew(角度deg)：平行四辺形を作ることができる。斜め線を表現したい場合によく使用する */
+  /* scale(x軸, y軸)：数字分その方向に大きくすることができる */
+  /* 複数のtransformを使用する場合は半角スペースを空けて記述する */
+}
+/*# sourceMappingURL=style.css.map */

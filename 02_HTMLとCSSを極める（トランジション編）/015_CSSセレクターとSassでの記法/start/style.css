@@ -1,0 +1,25 @@
+@charset "UTF-8";
+#container {
+  text-align: center;
+}
+
+.btn {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #333;
+  padding: 10px 40px;
+  margin: 50px 0;
+  /* font-weighは100-900 デフォルトは500 */
+  font-weight: 600;
+  cursor: pointer;
+  /* 変更の動作設定を行う */
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border-radius: 3px;
+}
+
+.btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */

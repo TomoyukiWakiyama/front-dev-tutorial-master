@@ -1,0 +1,68 @@
+$cWhite: white;
+$cBlack: black;
+
+#container {
+  text-align: center;
+}
+.try {
+  .btn {
+    position: relative;
+    display: inline-block;
+    transform-style: preserve-3d;
+    perspective: 300px;
+    width: 150px;
+    height: 50px;
+    margin: 0 auto;
+    cursor: pointer;
+
+    &.cubic {
+      /** スタイルをここに追加。*/
+
+        & span {
+            // 2つのspanをまとめて定義して、重ねて配置する
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            border: 1px solid $cBlack;
+            border-radius: 4px;
+
+            // 文字の縦中央揃えにする。height50px - border上下2px = 48px
+            line-height: 48px;
+            text-align: center;
+
+            transition: all 0.3s;
+            // ボタンの高さが50pxのためその半分の長さの奥側（キューブ中央）から回転させる
+            transform-origin: center center -25px;
+        }
+
+        & .hovering {
+            background-color: $cBlack;
+            color: $cWhite;
+
+            // hover前は正面ではなく上90度で表示させる
+            transform: rotateX(90deg);
+        }
+
+        & .default {
+        background-color: $cWhite;
+        color: $cBlack;
+
+        transform: rotateX(0);
+        }
+
+        &:hover {
+            & .hovering {
+                transform: rotateX(0);
+            }
+    
+            & .default {
+            transform: rotateX(-90deg);
+            }
+        }
+
+    }
+  }
+}
