@@ -1,6 +1,10 @@
 const btn = document.querySelector('#btn');
-const hello = function () { 
+
+const changeColor = function() {
     this.style.color = 'red';
- };
-btn.addEventListener('click', hello);
-// btn.addEventListener('mouseover', hello);
+}
+function changeBackground() {
+    this.style.backgroundColor = 'blue';
+}
+btn.addEventListener('click', changeColor);
+btn.addEventListener('click', changeBackground);
