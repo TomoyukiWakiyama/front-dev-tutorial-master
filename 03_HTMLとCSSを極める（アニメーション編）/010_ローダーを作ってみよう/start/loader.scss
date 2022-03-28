@@ -1,24 +1,21 @@
 .three-dot-spinner {
     text-align: center;
-
     & div {
         display: inline-block;
-        width: 18px;
-        height: 18px;
-
-        // 黒丸を作る
+        width: 16px;
+        height: 16px;
         background-color: #000;
         border-radius: 50%;
-
-        // アニメーションを作成する
+        // 第１引数：アニメーションを設定するキーフレームの名前を指定する
+        // 第２引数：動作時間を指定する
+        // 第３引数：その他オプション 今回は無限に動作させるinfinite
         animation: sk-bouncedelay 1.4s infinite;
-
     }
 
+    // 他よりも早く動作を開始させるためにマイナスを使用する
     & .bounce1 {
         animation-delay: -0.32s;
     }
-
     & .bounce2 {
         animation-delay: -0.16s;
     }
@@ -28,15 +25,12 @@
     0% {
         transform: scale(0);
     }
-
     40% {
         transform: scale(1);
     }
-
     80% {
         transform: scale(0);
     }
-
     100% {
         transform: scale(0);
     }
