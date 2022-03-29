@@ -1,18 +1,14 @@
 document.addEventListener('DOMContentLoaded', function(){
     const el = document.querySelector('.animate-title');
+    // HTML要素を取得する
+    // trimで前後の空白を取り除く
+    // splitで配列として一文字ずつ格納する
     const str = el.innerHTML.trim().split("");
-
-    el.innerHTML = str.reduce(function(acc, curr){
+    const result = str.reduce((accu, curr) => {
         curr = curr.replace(' ', '&nbsp;');
-        return `${acc}<span class="char">${curr}</span>`;
-    }, "");
+        return accu + `<span class="char">${curr}</span>`;
+    }, '');
 
-
-    // let concatStr = '';
-
-    // for(let c of str){
-    //     c = c.replace(' ', '&nbsp;');
-    //     concatStr += `<span class="char">${c}</span>`;
-    // }
-    // el.innerHTML = concatStr;
+    el.innerHTML = result;
+    console.log(result);
 });

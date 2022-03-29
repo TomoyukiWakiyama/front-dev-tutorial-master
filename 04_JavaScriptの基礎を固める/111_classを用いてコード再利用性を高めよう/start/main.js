@@ -1,7 +1,7 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function(){
     const ta = new TextAnimation('.animate-title');
-    const ta2 = new TextAnimation('.animate-title-2');
     ta.animate();
+    const ta2 = new TextAnimation('.animate-title-2');
     ta2.animate();
 });
 
@@ -12,9 +12,10 @@ class TextAnimation {
         this.el.innerHTML = this._splitText();
     }
     _splitText() {
-        return this.chars.reduce((acc,curr) => {
-            return `${acc}<span class="char">${curr}</span>`;
-        }, "");
+        return this.chars.reduce((accu, curr) => {
+            curr = curr.replace(' ', '&nbsp;');
+            return accu + `<span class="char">${curr}</span>`;
+        }, '');
     }
     animate() {
         this.el.classList.toggle('inview');
